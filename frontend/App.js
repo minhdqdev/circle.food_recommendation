@@ -5,6 +5,7 @@ import { NavigationContainer, TabActions } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { AntDesign } from "@expo/vector-icons";
 
+import ProfileScreen from "./screens/profile-screen";
 
 class HomeScreen extends React.Component {
 
@@ -53,20 +54,6 @@ class SavedScreen extends React.Component {
     );
   }
 }
-
-class ProfileScreen extends React.Component {
-
-
-  render(){
-    return (
-      <View style={styles.container}>
-        <Text>Profile</Text>
-      </View>
-    );
-  }
-}
-
-
 
 
 
