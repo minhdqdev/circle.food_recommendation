@@ -6,7 +6,9 @@ import { AntDesign } from "@expo/vector-icons";
 import HomeScreen from "./src/screens/HomeScreen";
 import ActivityScreen from "./src/screens/ActivityScreen";
 import { createStackNavigator } from "@react-navigation/stack";
-import { DetaiScreen } from "./src/screens/DetailScreen";
+import DetailScreen from "./src/screens/DetailScreen";
+
+import ProfileScreen from "./screens/profile-screen";
 
 class CheckinScreen extends React.Component {
     render() {
@@ -28,16 +30,6 @@ class SavedScreen extends React.Component {
     }
 }
 
-class ProfileScreen extends React.Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text>Profile</Text>
-            </View>
-        );
-    }
-}
-
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
@@ -45,7 +37,7 @@ const ActivityStackScreen = () => {
     return (
         <Stack.Navigator initialRouteName="Activity">
             <Stack.Screen name="Activity" component={ActivityScreen} />
-            <Stack.Screen name="Detail" component={DetaiScreen} />
+            <Stack.Screen name="Detail" component={DetailScreen} />
         </Stack.Navigator>
     );
 };

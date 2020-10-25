@@ -15,7 +15,7 @@ import { ScrollView } from "react-native-gesture-handler";
 
 const { height, width } = Dimensions.get("screen");
 
-export class DetaiScreen extends React.PureComponent {
+export default class DetailScreen extends React.PureComponent {
     render() {
         const {
             imgStore,
