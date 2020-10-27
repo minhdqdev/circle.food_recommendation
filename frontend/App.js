@@ -6,6 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { AntDesign } from "@expo/vector-icons";
 
 import ProfileScreen from "./screens/profile-screen";
+import SavedScreen from './screens/saved-screen';
 
 class HomeScreen extends React.Component {
 
@@ -42,29 +43,6 @@ class CheckinScreen extends React.Component {
     );
   }
 }
-
-
-class SavedScreen extends React.Component {
-
-  render(){
-    return (
-      <View style={styles.container}>
-        <Text>Saved</Text>
-      </View>
-    );
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
 
 const Tab = createBottomTabNavigator();
 
