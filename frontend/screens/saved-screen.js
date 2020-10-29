@@ -85,8 +85,8 @@ export default class SavedScreen extends React.Component {
             <ScrollView style={{height: '100%', width: '100%'}}>
                 <View>
                     {
-                        restaurants.map((r) => {
-                            return <RestaurantItem data={r}/>;
+                        restaurants.map((r, i) => {
+                            return <RestaurantItem data={r} key={i}/>;
                         })
                     }
                     

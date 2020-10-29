@@ -13,13 +13,11 @@ const user = {
     gender: "nam",
 }
 
-const signOut = () => {
-    alert('hi');
-}
-
 
 export default class ProfileScreen extends React.Component {
-
+    constructor(props){
+        super(props);
+    }
 
     render(){
         return (
@@ -67,7 +65,7 @@ export default class ProfileScreen extends React.Component {
                 </View>
             </View>
             
-            <TouchableOpacity style={styles.signOutButton} onPress={signOut}>
+            <TouchableOpacity style={styles.signOutButton} onPress={()=> this.props.navigation.navigate('Login')}>
                 <Text style={{color: 'white'}}>Đăng xuất</Text>
             </TouchableOpacity>
             
