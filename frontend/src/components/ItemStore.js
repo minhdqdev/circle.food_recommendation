@@ -2,14 +2,16 @@ import React from "react";
 import { StyleSheet, Text, View, Image, Dimensions } from "react-native";
 import { DEFAULT_IMAGE } from "../utils/Constant";
 import { Rating, AirbnbRating } from "react-native-ratings";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 const { height, width } = Dimensions.get("screen");
 
 export class ItemStore extends React.PureComponent {
     render() {
+        const { onPressItem } = this.props;
         const { imgStore, name, address, rating } = this.props.item;
         return (
-            <View style={styles.container}>
+            <TouchableOpacity style={styles.container} onPress={onPressItem}>
                 <Image
                     style={styles.image}
                     resizeMode="stretch"
@@ -29,7 +31,7 @@ export class ItemStore extends React.PureComponent {
                     />
                     <Text>({rating})</Text>
                 </View>
-            </View>
+            </TouchableOpacity>
         );
     }
 }
@@ -37,7 +39,7 @@ export class ItemStore extends React.PureComponent {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        width: "40%",
+        width: "100%",
         justifyContent: "center",
         alignItems: "center",
         padding: 12,

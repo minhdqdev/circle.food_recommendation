@@ -1,0 +1,1125 @@
+{
+  "status": true,
+  "data": {
+    "campaigns": [],
+    "categories": ["Bistro"],
+    "cuisines": ["Asian"],
+    "delivery_categories": [2520, 2515, 2429, 2519],
+    "delivery_fees": [],
+    "phones": ["0936002618"],
+    "photos": [
+      {
+        "width": 60,
+        "value": "https://images.foody.vn/res/g72/711144/prof/s60x60/foody-upload-api-foody-mobile-2-200929165825.jpg",
+        "height": 60
+      },
+      {
+        "width": 120,
+        "value": "https://images.foody.vn/res/g72/711144/prof/s120x120/foody-upload-api-foody-mobile-2-200929165825.jpg",
+        "height": 120
+      },
+      {
+        "width": 160,
+        "value": "https://images.foody.vn/res/g72/711144/prof/s160x120/foody-upload-api-foody-mobile-2-200929165825.jpg",
+        "height": 120
+      },
+      {
+        "width": 160,
+        "value": "https://images.foody.vn/res/g72/711144/prof/s160x160/foody-upload-api-foody-mobile-2-200929165825.jpg",
+        "height": 160
+      },
+      {
+        "width": 180,
+        "value": "https://images.foody.vn/res/g72/711144/prof/s180x180/foody-upload-api-foody-mobile-2-200929165825.jpg",
+        "height": 180
+      },
+      {
+        "width": 240,
+        "value": "https://images.foody.vn/res/g72/711144/prof/s240x240/foody-upload-api-foody-mobile-2-200929165825.jpg",
+        "height": 240
+      },
+      {
+        "width": 280,
+        "value": "https://images.foody.vn/res/g72/711144/prof/s280x175/foody-upload-api-foody-mobile-2-200929165825.jpg",
+        "height": 175
+      },
+      {
+        "width": 400,
+        "value": "https://images.foody.vn/res/g72/711144/prof/s400x216/foody-upload-api-foody-mobile-2-200929165825.jpg",
+        "height": 216
+      },
+      {
+        "width": 600,
+        "value": "https://images.foody.vn/res/g72/711144/prof/s600x324/foody-upload-api-foody-mobile-2-200929165825.jpg",
+        "height": 324
+      },
+      {
+        "width": 640,
+        "value": "https://images.foody.vn/res/g72/711144/prof/s640x400/foody-upload-api-foody-mobile-2-200929165825.jpg",
+        "height": 400
+      },
+      {
+        "width": 640,
+        "value": "https://images.foody.vn/res/g72/711144/prof/s640x640/foody-upload-api-foody-mobile-2-200929165825.jpg",
+        "height": 640
+      },
+      {
+        "width": 750,
+        "value": "https://images.foody.vn/res/g72/711144/prof/s750x400/foody-upload-api-foody-mobile-2-200929165825.jpg",
+        "height": 400
+      },
+      {
+        "width": 1242,
+        "value": "https://images.foody.vn/res/g72/711144/prof/s1242x600/foody-upload-api-foody-mobile-2-200929165825.jpg",
+        "height": 600
+      }
+    ],
+    "res_photos": [
+      {
+        "photos": [
+          {
+            "width": 60,
+            "value": "https://images.foody.vn/res/g72/711144/prof/s60x60/foody-upload-api-foody-mobile-2-200929165825.jpg",
+            "height": 60
+          },
+          {
+            "width": 120,
+            "value": "https://images.foody.vn/res/g72/711144/prof/s120x120/foody-upload-api-foody-mobile-2-200929165825.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/prof/s160x120/foody-upload-api-foody-mobile-2-200929165825.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/prof/s160x160/foody-upload-api-foody-mobile-2-200929165825.jpg",
+            "height": 160
+          },
+          {
+            "width": 180,
+            "value": "https://images.foody.vn/res/g72/711144/prof/s180x180/foody-upload-api-foody-mobile-2-200929165825.jpg",
+            "height": 180
+          },
+          {
+            "width": 240,
+            "value": "https://images.foody.vn/res/g72/711144/prof/s240x240/foody-upload-api-foody-mobile-2-200929165825.jpg",
+            "height": 240
+          },
+          {
+            "width": 280,
+            "value": "https://images.foody.vn/res/g72/711144/prof/s280x175/foody-upload-api-foody-mobile-2-200929165825.jpg",
+            "height": 175
+          },
+          {
+            "width": 400,
+            "value": "https://images.foody.vn/res/g72/711144/prof/s400x216/foody-upload-api-foody-mobile-2-200929165825.jpg",
+            "height": 216
+          },
+          {
+            "width": 600,
+            "value": "https://images.foody.vn/res/g72/711144/prof/s600x324/foody-upload-api-foody-mobile-2-200929165825.jpg",
+            "height": 324
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/prof/s640x400/foody-upload-api-foody-mobile-2-200929165825.jpg",
+            "height": 400
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/prof/s640x640/foody-upload-api-foody-mobile-2-200929165825.jpg",
+            "height": 640
+          },
+          {
+            "width": 750,
+            "value": "https://images.foody.vn/res/g72/711144/prof/s750x400/foody-upload-api-foody-mobile-2-200929165825.jpg",
+            "height": 400
+          },
+          {
+            "width": 1242,
+            "value": "https://images.foody.vn/res/g72/711144/prof/s1242x600/foody-upload-api-foody-mobile-2-200929165825.jpg",
+            "height": 600
+          }
+        ]
+      },
+      {
+        "photos": [
+          {
+            "width": 60,
+            "value": "https://images.foody.vn/res/g72/711144/s60x60/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-604-637339948236856303.jpg",
+            "height": 60
+          },
+          {
+            "width": 120,
+            "value": "https://images.foody.vn/res/g72/711144/s120x120/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-604-637339948236856303.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/s160x120/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-604-637339948236856303.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/s160x160/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-604-637339948236856303.jpg",
+            "height": 160
+          },
+          {
+            "width": 180,
+            "value": "https://images.foody.vn/res/g72/711144/s180x180/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-604-637339948236856303.jpg",
+            "height": 180
+          },
+          {
+            "width": 240,
+            "value": "https://images.foody.vn/res/g72/711144/s250x250/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-604-637339948236856303.jpg",
+            "height": 240
+          },
+          {
+            "width": 280,
+            "value": "https://images.foody.vn/res/g72/711144/s280x175/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-604-637339948236856303.jpg",
+            "height": 175
+          },
+          {
+            "width": 400,
+            "value": "https://images.foody.vn/res/g72/711144/s400x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-604-637339948236856303.jpg",
+            "height": 216
+          },
+          {
+            "width": 600,
+            "value": "https://images.foody.vn/res/g72/711144/s600x600/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-604-637339948236856303.jpg",
+            "height": 324
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/s640x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-604-637339948236856303.jpg",
+            "height": 400
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/s640x640/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-604-637339948236856303.jpg",
+            "height": 640
+          },
+          {
+            "width": 750,
+            "value": "https://images.foody.vn/res/g72/711144/s750x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-604-637339948236856303.jpg",
+            "height": 400
+          },
+          {
+            "width": 1242,
+            "value": "https://images.foody.vn/res/g72/711144/s1242x600/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-604-637339948236856303.jpg",
+            "height": 600
+          }
+        ]
+      },
+      {
+        "photos": [
+          {
+            "width": 60,
+            "value": "https://images.foody.vn/res/g72/711144/s60x60/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-545-637339948240606653.jpg",
+            "height": 60
+          },
+          {
+            "width": 120,
+            "value": "https://images.foody.vn/res/g72/711144/s120x120/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-545-637339948240606653.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/s160x120/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-545-637339948240606653.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/s160x160/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-545-637339948240606653.jpg",
+            "height": 160
+          },
+          {
+            "width": 180,
+            "value": "https://images.foody.vn/res/g72/711144/s180x180/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-545-637339948240606653.jpg",
+            "height": 180
+          },
+          {
+            "width": 240,
+            "value": "https://images.foody.vn/res/g72/711144/s250x250/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-545-637339948240606653.jpg",
+            "height": 240
+          },
+          {
+            "width": 280,
+            "value": "https://images.foody.vn/res/g72/711144/s280x175/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-545-637339948240606653.jpg",
+            "height": 175
+          },
+          {
+            "width": 400,
+            "value": "https://images.foody.vn/res/g72/711144/s400x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-545-637339948240606653.jpg",
+            "height": 216
+          },
+          {
+            "width": 600,
+            "value": "https://images.foody.vn/res/g72/711144/s600x600/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-545-637339948240606653.jpg",
+            "height": 324
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/s640x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-545-637339948240606653.jpg",
+            "height": 400
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/s640x640/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-545-637339948240606653.jpg",
+            "height": 640
+          },
+          {
+            "width": 750,
+            "value": "https://images.foody.vn/res/g72/711144/s750x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-545-637339948240606653.jpg",
+            "height": 400
+          },
+          {
+            "width": 1242,
+            "value": "https://images.foody.vn/res/g72/711144/s1242x600/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-545-637339948240606653.jpg",
+            "height": 600
+          }
+        ]
+      },
+      {
+        "photos": [
+          {
+            "width": 60,
+            "value": "https://images.foody.vn/res/g72/711144/s60x60/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-802-637336351297986869.jpg",
+            "height": 60
+          },
+          {
+            "width": 120,
+            "value": "https://images.foody.vn/res/g72/711144/s120x120/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-802-637336351297986869.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/s160x120/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-802-637336351297986869.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/s160x160/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-802-637336351297986869.jpg",
+            "height": 160
+          },
+          {
+            "width": 180,
+            "value": "https://images.foody.vn/res/g72/711144/s180x180/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-802-637336351297986869.jpg",
+            "height": 180
+          },
+          {
+            "width": 240,
+            "value": "https://images.foody.vn/res/g72/711144/s250x250/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-802-637336351297986869.jpg",
+            "height": 240
+          },
+          {
+            "width": 280,
+            "value": "https://images.foody.vn/res/g72/711144/s280x175/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-802-637336351297986869.jpg",
+            "height": 175
+          },
+          {
+            "width": 400,
+            "value": "https://images.foody.vn/res/g72/711144/s400x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-802-637336351297986869.jpg",
+            "height": 216
+          },
+          {
+            "width": 600,
+            "value": "https://images.foody.vn/res/g72/711144/s600x600/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-802-637336351297986869.jpg",
+            "height": 324
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/s640x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-802-637336351297986869.jpg",
+            "height": 400
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/s640x640/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-802-637336351297986869.jpg",
+            "height": 640
+          },
+          {
+            "width": 750,
+            "value": "https://images.foody.vn/res/g72/711144/s750x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-802-637336351297986869.jpg",
+            "height": 400
+          },
+          {
+            "width": 1242,
+            "value": "https://images.foody.vn/res/g72/711144/s1242x600/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-802-637336351297986869.jpg",
+            "height": 600
+          }
+        ]
+      },
+      {
+        "photos": [
+          {
+            "width": 60,
+            "value": "https://images.foody.vn/res/g72/711144/s60x60/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-793-637336351297986869.jpg",
+            "height": 60
+          },
+          {
+            "width": 120,
+            "value": "https://images.foody.vn/res/g72/711144/s120x120/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-793-637336351297986869.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/s160x120/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-793-637336351297986869.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/s160x160/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-793-637336351297986869.jpg",
+            "height": 160
+          },
+          {
+            "width": 180,
+            "value": "https://images.foody.vn/res/g72/711144/s180x180/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-793-637336351297986869.jpg",
+            "height": 180
+          },
+          {
+            "width": 240,
+            "value": "https://images.foody.vn/res/g72/711144/s250x250/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-793-637336351297986869.jpg",
+            "height": 240
+          },
+          {
+            "width": 280,
+            "value": "https://images.foody.vn/res/g72/711144/s280x175/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-793-637336351297986869.jpg",
+            "height": 175
+          },
+          {
+            "width": 400,
+            "value": "https://images.foody.vn/res/g72/711144/s400x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-793-637336351297986869.jpg",
+            "height": 216
+          },
+          {
+            "width": 600,
+            "value": "https://images.foody.vn/res/g72/711144/s600x600/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-793-637336351297986869.jpg",
+            "height": 324
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/s640x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-793-637336351297986869.jpg",
+            "height": 400
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/s640x640/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-793-637336351297986869.jpg",
+            "height": 640
+          },
+          {
+            "width": 750,
+            "value": "https://images.foody.vn/res/g72/711144/s750x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-793-637336351297986869.jpg",
+            "height": 400
+          },
+          {
+            "width": 1242,
+            "value": "https://images.foody.vn/res/g72/711144/s1242x600/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-793-637336351297986869.jpg",
+            "height": 600
+          }
+        ]
+      },
+      {
+        "photos": [
+          {
+            "width": 60,
+            "value": "https://images.foody.vn/res/g72/711144/s60x60/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-867-637190342029181528.jpg",
+            "height": 60
+          },
+          {
+            "width": 120,
+            "value": "https://images.foody.vn/res/g72/711144/s120x120/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-867-637190342029181528.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/s160x120/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-867-637190342029181528.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/s160x160/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-867-637190342029181528.jpg",
+            "height": 160
+          },
+          {
+            "width": 180,
+            "value": "https://images.foody.vn/res/g72/711144/s180x180/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-867-637190342029181528.jpg",
+            "height": 180
+          },
+          {
+            "width": 240,
+            "value": "https://images.foody.vn/res/g72/711144/s250x250/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-867-637190342029181528.jpg",
+            "height": 240
+          },
+          {
+            "width": 280,
+            "value": "https://images.foody.vn/res/g72/711144/s280x175/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-867-637190342029181528.jpg",
+            "height": 175
+          },
+          {
+            "width": 400,
+            "value": "https://images.foody.vn/res/g72/711144/s400x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-867-637190342029181528.jpg",
+            "height": 216
+          },
+          {
+            "width": 600,
+            "value": "https://images.foody.vn/res/g72/711144/s600x600/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-867-637190342029181528.jpg",
+            "height": 324
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/s640x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-867-637190342029181528.jpg",
+            "height": 400
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/s640x640/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-867-637190342029181528.jpg",
+            "height": 640
+          },
+          {
+            "width": 750,
+            "value": "https://images.foody.vn/res/g72/711144/s750x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-867-637190342029181528.jpg",
+            "height": 400
+          },
+          {
+            "width": 1242,
+            "value": "https://images.foody.vn/res/g72/711144/s1242x600/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-867-637190342029181528.jpg",
+            "height": 600
+          }
+        ]
+      },
+      {
+        "photos": [
+          {
+            "width": 60,
+            "value": "https://images.foody.vn/res/g72/711144/s60x60/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-645-637190342030275379.jpg",
+            "height": 60
+          },
+          {
+            "width": 120,
+            "value": "https://images.foody.vn/res/g72/711144/s120x120/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-645-637190342030275379.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/s160x120/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-645-637190342030275379.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/s160x160/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-645-637190342030275379.jpg",
+            "height": 160
+          },
+          {
+            "width": 180,
+            "value": "https://images.foody.vn/res/g72/711144/s180x180/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-645-637190342030275379.jpg",
+            "height": 180
+          },
+          {
+            "width": 240,
+            "value": "https://images.foody.vn/res/g72/711144/s250x250/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-645-637190342030275379.jpg",
+            "height": 240
+          },
+          {
+            "width": 280,
+            "value": "https://images.foody.vn/res/g72/711144/s280x175/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-645-637190342030275379.jpg",
+            "height": 175
+          },
+          {
+            "width": 400,
+            "value": "https://images.foody.vn/res/g72/711144/s400x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-645-637190342030275379.jpg",
+            "height": 216
+          },
+          {
+            "width": 600,
+            "value": "https://images.foody.vn/res/g72/711144/s600x600/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-645-637190342030275379.jpg",
+            "height": 324
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/s640x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-645-637190342030275379.jpg",
+            "height": 400
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/s640x640/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-645-637190342030275379.jpg",
+            "height": 640
+          },
+          {
+            "width": 750,
+            "value": "https://images.foody.vn/res/g72/711144/s750x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-645-637190342030275379.jpg",
+            "height": 400
+          },
+          {
+            "width": 1242,
+            "value": "https://images.foody.vn/res/g72/711144/s1242x600/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-645-637190342030275379.jpg",
+            "height": 600
+          }
+        ]
+      },
+      {
+        "photos": [
+          {
+            "width": 60,
+            "value": "https://images.foody.vn/res/g72/711144/s60x60/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-404-637190336726701890.jpg",
+            "height": 60
+          },
+          {
+            "width": 120,
+            "value": "https://images.foody.vn/res/g72/711144/s120x120/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-404-637190336726701890.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/s160x120/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-404-637190336726701890.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/s160x160/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-404-637190336726701890.jpg",
+            "height": 160
+          },
+          {
+            "width": 180,
+            "value": "https://images.foody.vn/res/g72/711144/s180x180/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-404-637190336726701890.jpg",
+            "height": 180
+          },
+          {
+            "width": 240,
+            "value": "https://images.foody.vn/res/g72/711144/s250x250/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-404-637190336726701890.jpg",
+            "height": 240
+          },
+          {
+            "width": 280,
+            "value": "https://images.foody.vn/res/g72/711144/s280x175/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-404-637190336726701890.jpg",
+            "height": 175
+          },
+          {
+            "width": 400,
+            "value": "https://images.foody.vn/res/g72/711144/s400x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-404-637190336726701890.jpg",
+            "height": 216
+          },
+          {
+            "width": 600,
+            "value": "https://images.foody.vn/res/g72/711144/s600x600/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-404-637190336726701890.jpg",
+            "height": 324
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/s640x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-404-637190336726701890.jpg",
+            "height": 400
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/s640x640/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-404-637190336726701890.jpg",
+            "height": 640
+          },
+          {
+            "width": 750,
+            "value": "https://images.foody.vn/res/g72/711144/s750x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-404-637190336726701890.jpg",
+            "height": 400
+          },
+          {
+            "width": 1242,
+            "value": "https://images.foody.vn/res/g72/711144/s1242x600/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-404-637190336726701890.jpg",
+            "height": 600
+          }
+        ]
+      },
+      {
+        "photos": [
+          {
+            "width": 60,
+            "value": "https://images.foody.vn/res/g72/711144/s60x60/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-554-637190336712054055.jpg",
+            "height": 60
+          },
+          {
+            "width": 120,
+            "value": "https://images.foody.vn/res/g72/711144/s120x120/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-554-637190336712054055.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/s160x120/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-554-637190336712054055.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/s160x160/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-554-637190336712054055.jpg",
+            "height": 160
+          },
+          {
+            "width": 180,
+            "value": "https://images.foody.vn/res/g72/711144/s180x180/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-554-637190336712054055.jpg",
+            "height": 180
+          },
+          {
+            "width": 240,
+            "value": "https://images.foody.vn/res/g72/711144/s250x250/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-554-637190336712054055.jpg",
+            "height": 240
+          },
+          {
+            "width": 280,
+            "value": "https://images.foody.vn/res/g72/711144/s280x175/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-554-637190336712054055.jpg",
+            "height": 175
+          },
+          {
+            "width": 400,
+            "value": "https://images.foody.vn/res/g72/711144/s400x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-554-637190336712054055.jpg",
+            "height": 216
+          },
+          {
+            "width": 600,
+            "value": "https://images.foody.vn/res/g72/711144/s600x600/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-554-637190336712054055.jpg",
+            "height": 324
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/s640x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-554-637190336712054055.jpg",
+            "height": 400
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/s640x640/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-554-637190336712054055.jpg",
+            "height": 640
+          },
+          {
+            "width": 750,
+            "value": "https://images.foody.vn/res/g72/711144/s750x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-554-637190336712054055.jpg",
+            "height": 400
+          },
+          {
+            "width": 1242,
+            "value": "https://images.foody.vn/res/g72/711144/s1242x600/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-554-637190336712054055.jpg",
+            "height": 600
+          }
+        ]
+      },
+      {
+        "photos": [
+          {
+            "width": 60,
+            "value": "https://images.foody.vn/res/g72/711144/s60x60/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-388-637078784641771123.jpg",
+            "height": 60
+          },
+          {
+            "width": 120,
+            "value": "https://images.foody.vn/res/g72/711144/s120x120/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-388-637078784641771123.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/s160x120/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-388-637078784641771123.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/s160x160/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-388-637078784641771123.jpg",
+            "height": 160
+          },
+          {
+            "width": 180,
+            "value": "https://images.foody.vn/res/g72/711144/s180x180/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-388-637078784641771123.jpg",
+            "height": 180
+          },
+          {
+            "width": 240,
+            "value": "https://images.foody.vn/res/g72/711144/s250x250/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-388-637078784641771123.jpg",
+            "height": 240
+          },
+          {
+            "width": 280,
+            "value": "https://images.foody.vn/res/g72/711144/s280x175/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-388-637078784641771123.jpg",
+            "height": 175
+          },
+          {
+            "width": 400,
+            "value": "https://images.foody.vn/res/g72/711144/s400x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-388-637078784641771123.jpg",
+            "height": 216
+          },
+          {
+            "width": 600,
+            "value": "https://images.foody.vn/res/g72/711144/s600x600/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-388-637078784641771123.jpg",
+            "height": 324
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/s640x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-388-637078784641771123.jpg",
+            "height": 400
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/s640x640/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-388-637078784641771123.jpg",
+            "height": 640
+          },
+          {
+            "width": 750,
+            "value": "https://images.foody.vn/res/g72/711144/s750x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-388-637078784641771123.jpg",
+            "height": 400
+          },
+          {
+            "width": 1242,
+            "value": "https://images.foody.vn/res/g72/711144/s1242x600/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-388-637078784641771123.jpg",
+            "height": 600
+          }
+        ]
+      },
+      {
+        "photos": [
+          {
+            "width": 60,
+            "value": "https://images.foody.vn/res/g72/711144/s60x60/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-615-637078784592860437.jpg",
+            "height": 60
+          },
+          {
+            "width": 120,
+            "value": "https://images.foody.vn/res/g72/711144/s120x120/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-615-637078784592860437.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/s160x120/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-615-637078784592860437.jpg",
+            "height": 120
+          },
+          {
+            "width": 160,
+            "value": "https://images.foody.vn/res/g72/711144/s160x160/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-615-637078784592860437.jpg",
+            "height": 160
+          },
+          {
+            "width": 180,
+            "value": "https://images.foody.vn/res/g72/711144/s180x180/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-615-637078784592860437.jpg",
+            "height": 180
+          },
+          {
+            "width": 240,
+            "value": "https://images.foody.vn/res/g72/711144/s250x250/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-615-637078784592860437.jpg",
+            "height": 240
+          },
+          {
+            "width": 280,
+            "value": "https://images.foody.vn/res/g72/711144/s280x175/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-615-637078784592860437.jpg",
+            "height": 175
+          },
+          {
+            "width": 400,
+            "value": "https://images.foody.vn/res/g72/711144/s400x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-615-637078784592860437.jpg",
+            "height": 216
+          },
+          {
+            "width": 600,
+            "value": "https://images.foody.vn/res/g72/711144/s600x600/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-615-637078784592860437.jpg",
+            "height": 324
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/s640x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-615-637078784592860437.jpg",
+            "height": 400
+          },
+          {
+            "width": 640,
+            "value": "https://images.foody.vn/res/g72/711144/s640x640/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-615-637078784592860437.jpg",
+            "height": 640
+          },
+          {
+            "width": 750,
+            "value": "https://images.foody.vn/res/g72/711144/s750x400/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-615-637078784592860437.jpg",
+            "height": 400
+          },
+          {
+            "width": 1242,
+            "value": "https://images.foody.vn/res/g72/711144/s1242x600/foody-fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong-615-637078784592860437.jpg",
+            "height": 600
+          }
+        ]
+      }
+    ],
+    "root_category_ids": [2417, 2387, 2422, 2424, 2427, 2431],
+    "menu_infos": [],
+    "_id": "5f86f1d9408897561875d269",
+    "total_order": 0,
+    "rating": {
+      "total_review": 10,
+      "avg": 4.3,
+      "display_total_review": "10+",
+      "app_link": "foody://foody.vn?action=reviewlist&id=711144"
+    },
+    "is_support_booking": true,
+    "is_subscribe": false,
+    "is_favorite": false,
+    "city_id": 218,
+    "restaurant_id": 711144,
+    "packing_fee": null,
+    "is_now_delivery": true,
+    "restaurant_url": "fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong",
+    "brand_id": 3995,
+    "video": null,
+    "asap_is_available": true,
+    "contract_type": 1,
+    "id": 48246,
+    "location_url": "ha-noi",
+    "is_quality_merchant": false,
+    "available_times": [
+      {
+        "date": "2020-10-14",
+        "times": [
+          "20:10",
+          "20:15",
+          "20:20",
+          "20:25",
+          "20:30",
+          "20:35",
+          "20:40",
+          "20:45",
+          "20:50",
+          "20:55",
+          "21:00"
+        ]
+      },
+      {
+        "date": "2020-10-15",
+        "times": [
+          "11:30",
+          "11:35",
+          "11:40",
+          "11:45",
+          "11:50",
+          "11:55",
+          "12:00",
+          "12:05",
+          "12:10",
+          "12:15",
+          "12:20",
+          "12:25",
+          "12:30",
+          "12:35",
+          "12:40",
+          "12:45",
+          "12:50",
+          "12:55",
+          "13:00",
+          "13:05",
+          "13:10",
+          "13:15",
+          "13:20",
+          "13:25",
+          "13:30"
+        ]
+      },
+      {
+        "date": "2020-10-16",
+        "times": [
+          "11:30",
+          "11:35",
+          "11:40",
+          "11:45",
+          "11:50",
+          "11:55",
+          "12:00",
+          "12:05",
+          "12:10",
+          "12:15",
+          "12:20",
+          "12:25",
+          "12:30",
+          "12:35",
+          "12:40",
+          "12:45",
+          "12:50",
+          "12:55",
+          "13:00",
+          "13:05",
+          "13:10",
+          "13:15",
+          "13:20",
+          "13:25",
+          "13:30",
+          "18:30",
+          "18:35",
+          "18:40",
+          "18:45",
+          "18:50",
+          "18:55",
+          "19:00",
+          "19:05",
+          "19:10",
+          "19:15",
+          "19:20",
+          "19:25",
+          "19:30",
+          "19:35",
+          "19:40",
+          "19:45",
+          "19:50",
+          "19:55",
+          "20:00",
+          "20:05",
+          "20:10",
+          "20:15",
+          "20:20",
+          "20:25",
+          "20:30",
+          "20:35",
+          "20:40",
+          "20:45",
+          "20:50",
+          "20:55",
+          "21:00"
+        ]
+      }
+    ],
+    "is_city_alert": true,
+    "service_type": 1,
+    "vat": null,
+    "confirm_language": null,
+    "parking_fee": null,
+    "brand": {
+      "brand_id": 3995,
+      "brand_url": "fenghuang-dimsum-lau-trung-hoa",
+      "name": "Fenghuang - Dimsum & Lẩu Trung Hoa",
+      "restaurant_count": 4
+    },
+    "limit_distance": 10000,
+    "user_favorite_count": 44,
+    "delivery": {
+      "promotions": [
+        {
+          "apply_times": [
+            {
+              "apply_time_type": 2,
+              "denied_times": [],
+              "allow_times": [],
+              "allow_dates": [
+                { "start_date": "2020-08-01", "end_date": "2020-10-31" }
+              ],
+              "denied_dates": []
+            }
+          ],
+          "promo_code": "FREESHIP",
+          "is_check_airpay_new_user": false,
+          "discount_value_type": 2,
+          "promotion_type": 2,
+          "merchant_type": 4,
+          "custom_condition": [
+            { "content": "60,000đ", "label": "Minimum order" },
+            {
+              "content": "01/08/2020-31/10/2020",
+              "label": "Applicable delivery time"
+            },
+            { "content": "31/10/2020 23:59", "label": "Expiry date" },
+            { "content": "Not apply for Pick-up order", "label": "" },
+            { "content": "1 times/ user", "label": "Weekly usage limit" },
+            { "content": "Applied for Partner", "label": "" },
+            { "content": "HCM City, Ha Noi City", "label": "City" }
+          ],
+          "min_order_value": "60,000đ",
+          "promotion_id": 15561009,
+          "title": { "message": "Enter \"FREESHIP\": Freeship within 3km" },
+          "max_discount_value": "15,000đ",
+          "discount_on_type": 3,
+          "browsing_icon": "https://images.foody.vn/icon/browsing_discount/s/freeship.png",
+          "discount_amount": 15000,
+          "foody_service_ids": [1],
+          "discount_type": 1,
+          "apply_order": 150,
+          "expired": "31/10/2020 23:59",
+          "icon": "https://images.foody.vn/icon/discount/s/freeship.png",
+          "min_order_amount": 60000,
+          "discount": "15,000đ",
+          "short_title": "Enter \"FREESHIP\": Freeship within 3km",
+          "home_title": "FREESHIP",
+          "user_condition": {
+            "is_check_airpay_new_user": false,
+            "limit_per_user": [{ "max_usage_time": 1, "period": 3 }],
+            "platforms": []
+          },
+          "max_discount_amount": 15000,
+          "shipping_methods": [1]
+        }
+      ],
+      "delivery_alert": null,
+      "time": {
+        "available": [],
+        "week_days": [
+          { "start_time": "11:00", "week_day": 1, "end_time": "13:30" },
+          { "start_time": "11:00", "week_day": 2, "end_time": "13:30" },
+          { "start_time": "11:00", "week_day": 3, "end_time": "13:30" },
+          { "start_time": "11:00", "week_day": 4, "end_time": "13:30" },
+          { "start_time": "11:00", "week_day": 5, "end_time": "13:30" },
+          { "start_time": "11:00", "week_day": 6, "end_time": "13:30" },
+          { "start_time": "11:00", "week_day": 7, "end_time": "13:30" },
+          { "start_time": "18:00", "week_day": 1, "end_time": "21:00" },
+          { "start_time": "18:00", "week_day": 2, "end_time": "21:00" },
+          { "start_time": "18:00", "week_day": 3, "end_time": "21:00" },
+          { "start_time": "18:00", "week_day": 5, "end_time": "21:00" },
+          { "start_time": "18:00", "week_day": 6, "end_time": "21:00" },
+          { "start_time": "18:00", "week_day": 7, "end_time": "21:00" }
+        ],
+        "not_available": []
+      },
+      "service_by": "Now",
+      "service_fee": { "text": "0.0%", "value": 0 },
+      "merchant_limit_distance": -1,
+      "payment_methods": [6, 1, 4, 2, 8],
+      "has_contract": true,
+      "setting_limit_distance": 10000,
+      "merchant_time": 25,
+      "prepare_duration": 25,
+      "ship_types": [],
+      "avg_price": {
+        "text": "42k",
+        "format_text": {
+          "resource_name": "avg_price_format",
+          "resource_args": ["42k"]
+        },
+        "value": 41655,
+        "unit": "đ"
+      },
+      "min_order_value": { "text": "20,000đ", "value": 20000, "unit": "đ" },
+      "operating": {
+        "status": 1,
+        "color": "#239839",
+        "close_time": "21:00:00",
+        "open_time": "18:00:00",
+        "text": { "resource_name": "delivery_restaurant_opening" }
+      },
+      "is_open": true,
+      "shipping_fee": {
+        "text": {
+          "resource_name": "delivery_shipping_fee",
+          "resource_args": ["8,500đ"]
+        },
+        "value": 5000,
+        "is_increasing": 1,
+        "rate": 1.7,
+        "minimum_fee": "26,000đ",
+        "unit": "đ"
+      },
+      "is_peak_mode": true,
+      "min_charge": "3,000đ",
+      "is_foody_delivery": true
+    },
+    "is_display_cutlery": true,
+    "address": "178 Triệu Việt Vương, Hai Bà Trưng, Hà Nội",
+    "price_range": { "min_price": 150000, "max_price": 300000 },
+    "foody_service_id": 1,
+    "min_order_value": { "text": "20,000đ", "value": 20000, "unit": "đ" },
+    "name": "Fenghuang - Triệu Việt Vương",
+    "url": "https://www.now.vn/ha-noi/fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong",
+    "display_order": 45788,
+    "delivery_id": 48246,
+    "district_id": 24,
+    "is_pickup": false,
+    "short_description": null,
+    "url_rewrite_name": "fenghuang-dimsum-lau-trung-hoa-trieu-viet-vuong",
+    "parent_category_id": 2387,
+    "position": {
+      "latitude": 21.012641,
+      "is_verified": false,
+      "longitude": 105.850388
+    },
+    "name_en": "",
+    "__v": 0
+  }
+}

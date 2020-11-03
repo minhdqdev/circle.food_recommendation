@@ -1,0 +1,15 @@
+{
+  "status": true,
+  "data": [
+    {
+      "dishes": [11587380, 11587399],
+      "_id": "5f891daa9371222aa4a89b05",
+      "belongsToRestaurant": 48246,
+      "id": 642873,
+      "name": "MÓN NHẸ",
+      "__v": 0,
+      "createdAt": "2020-10-16T04:12:27.005Z",
+      "updatedAt": "2020-10-16T04:12:27.005Z"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "status": true,
+  "data": [
+    {
+      "options": [],
+      "photos": [
+        {
+          "width": 120,
+          "value": "https://images.foody.vn/res/g70/699719/s120x120/0a222342-d2cc-4ab4-89b5-c32db6ab-3bb0c100-200910092630.jpeg",
+          "height": 120
+        },
+        {
+          "width": 180,
+          "value": "https://images.foody.vn/res/g70/699719/s180x180/0a222342-d2cc-4ab4-89b5-c32db6ab-3bb0c100-200910092630.jpeg",
+          "height": 180
+        },
+        {
+          "width": 560,
+          "value": "https://images.foody.vn/res/g70/699719/s570x570/0a222342-d2cc-4ab4-89b5-c32db6ab-3bb0c100-200910092630.jpeg",
+          "height": 560
+        },
+        {
+          "width": 750,
+          "value": "https://images.foody.vn/res/g70/699719/s750x750/0a222342-d2cc-4ab4-89b5-c32db6ab-3bb0c100-200910092630.jpeg",
+          "height": 750
+        },
+        {
+          "width": 1242,
+          "value": "https://images.foody.vn/res/g70/699719/s1242x1242/0a222342-d2cc-4ab4-89b5-c32db6ab-3bb0c100-200910092630.jpeg",
+          "height": 1242
+        }
+      ],
+      "properties": [],
+      "_id": "5f891daa9371222aa4a89b0c",
+      "is_deleted": false,
+      "description": "",
+      "price": { "text": "15,000đ", "unit": "đ", "value": 15000 },
+      "is_active": true,
+      "display_order": 0,
+      "total_like": "0",
+      "is_available": true,
+      "time": {
+        "available": [],
+        "week_days": [
+          { "start": "00:00", "week_day": 1, "end": "23:59" },
+          { "start": "00:00", "week_day": 2, "end": "23:59" },
+          { "start": "00:00", "week_day": 3, "end": "23:59" },
+          { "start": "00:00", "week_day": 4, "end": "23:59" },
+          { "start": "00:00", "week_day": 5, "end": "23:59" },
+          { "start": "00:00", "week_day": 6, "end": "23:59" },
+          { "start": "00:00", "week_day": 7, "end": "23:59" }
+        ],
+        "not_available": []
+      },
+      "quantity": 0,
+      "id": 11587236,
+      "is_group_discount_item": true,
+      "name": "Củ cải muối chua cay",
+      "belongsToMenu": 1277103,
+      "belongsToRestaurant": 48246,
+      "__v": 0,
+      "createdAt": "2020-10-16T04:12:27.013Z",
+      "updatedAt": "2020-10-16T04:12:27.013Z"
+    }
+  ]
+}
