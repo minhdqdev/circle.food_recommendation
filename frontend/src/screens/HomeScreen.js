@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, FlatList, StatusBar } from "react-native";
 import { SearchBar } from "react-native-elements";
 import { ItemStore } from "../components/ItemStore";
+import { testAPI } from "../services/api";
 import { data } from "../utils/Constant";
 
 export default class HomeScreen extends React.PureComponent {
@@ -10,8 +11,13 @@ export default class HomeScreen extends React.PureComponent {
         search: "",
     };
 
+    onPressItem = async () => {
+        const data = await testAPI();
+        console.log(data);
+    };
+
     renderItem = ({ item, index }) => {
-        return <ItemStore item={item} />;
+        return <ItemStore item={item} onPressItem={this.onPressItem} />;
     };
 
     updateSearch = (search) => {
