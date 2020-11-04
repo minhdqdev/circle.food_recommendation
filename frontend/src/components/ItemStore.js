@@ -8,14 +8,18 @@ const { height, width } = Dimensions.get("screen");
 
 export class ItemStore extends React.PureComponent {
     render() {
-        const { onPressItem } = this.props;
-        const { imgStore, name, address, rating } = this.props.item;
+        const { onPress } = this.props;
+        const { photos, name, address, rating } = this.props.item;
         return (
-            <TouchableOpacity style={styles.container} onPress={onPressItem}>
+            <TouchableOpacity style={styles.container} onPress={onPress}>
                 <Image
                     style={styles.image}
                     resizeMode="stretch"
-                    source={imgStore ? imgStore : DEFAULT_IMAGE}
+                    source={
+                        photos
+                            ? { uri: photos[photos.length - 1].value }
+                            : DEFAULT_IMAGE
+                    }
                 />
                 <Text style={styles.nameStore}>{name}</Text>
                 <Text style={styles.address}>{address}</Text>
@@ -25,11 +29,11 @@ export class ItemStore extends React.PureComponent {
                         onFinishRating={this.ratingCompleted}
                         style={styles.rating}
                         isDisabled={true}
-                        defaultRating={rating}
+                        defaultRating={rating.avg}
                         fractions={10}
                         starStyle={styles.starRating}
                     />
-                    <Text>({rating})</Text>
+                    <Text>({rating.avg})</Text>
                 </View>
             </TouchableOpacity>
         );
@@ -39,7 +43,7 @@ export class ItemStore extends React.PureComponent {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        width: "100%",
+        width: width * 0.5,
         justifyContent: "center",
         alignItems: "center",
         padding: 12,
