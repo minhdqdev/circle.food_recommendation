@@ -5,7 +5,9 @@
         "android": "expo start --android",
         "ios": "expo start --ios",
         "web": "expo start --web",
-        "eject": "expo eject"
+        "eject": "expo eject",
+        "app": "expo start && node src/utils/response_data/server.js",
+        "server": "node src/utils/response_data/server.js"
     },
     "dependencies": {
         "@react-native-community/masked-view": "0.1.10",
@@ -28,7 +30,8 @@
         "react-native-web": "~0.13.12"
     },
     "devDependencies": {
-        "@babel/core": "~7.9.0"
+        "@babel/core": "~7.9.0",
+        "json-server": "^0.16.2"
     },
     "private": true
 }

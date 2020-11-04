@@ -2,15 +2,18 @@ import React from "react";
 import { StyleSheet, View, FlatList, StatusBar } from "react-native";
 import { SearchBar } from "react-native-elements";
 import { ItemStore } from "../components/ItemStore";
-import { getListRestaurant } from "../services/api";
+import { getListRestaurant, getSearchDish } from "../services/api";
 import { DETAIL_SCREEN } from "../utils/Constant";
+import { ItemDish } from "../components/ItemDish";
 
 const _ = require("lodash");
 
 class HomeScreen extends React.Component {
     state = {
+        type: 0,
         data: [],
         search: "",
+        page: 1,
     };
 
     constructor(props) {
@@ -33,8 +36,19 @@ class HomeScreen extends React.Component {
         return <ItemStore item={item} onPress={() => this.onPressItem(item)} />;
     };
 
-    debounceFunc = () => {
-        console.log(this.state.search);
+    renderItemDish = ({ item }) => {
+        return <ItemDish item={item} />;
+    };
+
+    debounceFunc = async () => {
+        const { search, page } = this.state;
+        if (search === "") {
+            const data = await getListRestaurant();
+            this.setState({ data, type: 0 });
+            return;
+        }
+        const data = await getSearchDish(search, page);
+        this.setState({ data, type: 1 });
     };
 
     onChangeText = (text) => {
@@ -43,7 +57,7 @@ class HomeScreen extends React.Component {
     };
 
     render() {
-        const { data, search } = this.state;
+        const { data, search, type, page } = this.state;
         return (
             <View style={styles.container}>
                 <StatusBar />
@@ -61,7 +75,7 @@ class HomeScreen extends React.Component {
                     numColumns={2}
                     keyExtractor={(item, index) => index.toString()}
                     data={data}
-                    renderItem={this.renderItem}
+                    renderItem={type ? this.renderItemDish : this.renderItem}
                 />
             </View>
         );

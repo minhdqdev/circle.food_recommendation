@@ -38,12 +38,13 @@ export const getDetailRestaurant = async (restaurantId) => {
     }
 };
 
-export const getDishOfRestaurant = async (query = "", page = 1) => {
+export const getDishOfRestaurant = async (restaurantId = 0) => {
     try {
-        const URL = `/search?query=${query}&page=${page}`;
+        //const URL = `/restaurant/${restaurantId}/dish`;
+        const URL = `/dish`;
         const response = await axiosIns.get(URL);
-        if (response.status) {
-            return response.data;
+        if (response.status && response.data.status) {
+            return response.data.data;
         } else {
             return response.err;
         }
@@ -54,10 +55,11 @@ export const getDishOfRestaurant = async (query = "", page = 1) => {
 
 export const getSearchDish = async (query = "", page = 1) => {
     try {
-        const URL = `/search?query=${query}&page=${page}`;
+        const URL = `/search`;
+        //const URL = `/search?query=${query}&page=${page}`;
         const response = await axiosIns.get(URL);
-        if (response.status) {
-            return response.data;
+        if (response.status && response.data.status) {
+            return response.data.data;
         } else {
             return response.err;
         }
