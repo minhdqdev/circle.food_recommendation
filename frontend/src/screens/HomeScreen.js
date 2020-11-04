@@ -1,27 +1,45 @@
 import React from "react";
-import { StyleSheet, Text, View, FlatList, StatusBar } from "react-native";
+import { StyleSheet, View, FlatList, StatusBar } from "react-native";
 import { SearchBar } from "react-native-elements";
 import { ItemStore } from "../components/ItemStore";
-import { testAPI } from "../services/api";
-import { data } from "../utils/Constant";
+import { getListRestaurant } from "../services/api";
+import { DETAIL_SCREEN } from "../utils/Constant";
 
-export default class HomeScreen extends React.PureComponent {
+const _ = require("lodash");
+
+class HomeScreen extends React.Component {
     state = {
-        data: data,
+        data: [],
         search: "",
     };
 
-    onPressItem = async () => {
-        const data = await testAPI();
-        console.log(data);
+    constructor(props) {
+        super(props);
+        this.onChangeTextDelayed = _.debounce(this.debounceFunc, 500);
+    }
+
+    componentDidMount = async () => {
+        const data = await getListRestaurant();
+        this.setState({ data: data });
     };
 
-    renderItem = ({ item, index }) => {
-        return <ItemStore item={item} onPressItem={this.onPressItem} />;
+    onPressItem = async (item) => {
+        this.props.navigation.navigate(DETAIL_SCREEN, {
+            data: item,
+        });
     };
 
-    updateSearch = (search) => {
-        this.setState({ search });
+    renderItem = ({ item }) => {
+        return <ItemStore item={item} onPress={() => this.onPressItem(item)} />;
+    };
+
+    debounceFunc = () => {
+        console.log(this.state.search);
+    };
+
+    onChangeText = (text) => {
+        this.setState({ search: text });
+        this.onChangeTextDelayed();
     };
 
     render() {
@@ -31,7 +49,7 @@ export default class HomeScreen extends React.PureComponent {
                 <StatusBar />
                 <SearchBar
                     placeholder="Tìm kiếm quán ăn..."
-                    onChangeText={this.updateSearch}
+                    onChangeText={this.onChangeText}
                     value={search}
                     inputStyle={styles.inputSearch}
                     containerStyle={styles.containerSearch}
@@ -49,6 +67,8 @@ export default class HomeScreen extends React.PureComponent {
         );
     }
 }
+
+export default HomeScreen;
 
 const styles = StyleSheet.create({
     container: {

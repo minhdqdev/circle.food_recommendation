@@ -13,9 +13,9 @@ export const testAPI = async () => {
 
 export const getListRestaurant = async () => {
     try {
-        const response = await axiosIns.get("/");
-        if (response.status) {
-            return response.data;
+        const response = await axiosIns.get("/restaurant");
+        if (response.status && response.data.status) {
+            return response.data.data;
         } else {
             return response.err;
         }

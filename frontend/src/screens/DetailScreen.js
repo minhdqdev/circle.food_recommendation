@@ -18,22 +18,24 @@ const { height, width } = Dimensions.get("screen");
 export default class DetailScreen extends React.PureComponent {
     render() {
         const {
-            imgStore,
+            photos,
             name,
-            description,
             rating,
-            activeTime,
             address,
-            phone,
-        } = store;
-
+            phones,
+        } = this.props.route.params.data;
+        console.log(this.props.route.params.data);
         return (
             <ScrollView style={{ flex: 1 }}>
                 <View style={styles.container}>
                     <Image
                         style={styles.image}
                         resizeMode="stretch"
-                        source={imgStore ? imgStore : DEFAULT_IMAGE}
+                        source={
+                            phones
+                                ? { uri: photos[photos.length - 1].value }
+                                : DEFAULT_IMAGE
+                        }
                     />
                     <Text style={styles.name}>{name}</Text>
                     <View style={styles.wrapperRating}>
@@ -42,15 +44,15 @@ export default class DetailScreen extends React.PureComponent {
                             onFinishRating={this.ratingCompleted}
                             style={styles.rating}
                             isDisabled={true}
-                            defaultRating={rating}
+                            defaultRating={rating.avg}
                             fractions={10}
                             starStyle={styles.starRating}
                             starContainerStyle={{ margin: 0 }}
                             style={{ margin: 0 }}
                         />
-                        <Text>({rating})</Text>
+                        <Text>({rating.avg})</Text>
                     </View>
-                    <Text>{description}</Text>
+                    {/* <Text>{descrip}</Text> */}
                     <Text style={styles.title}>Thông tin</Text>
                     <View style={{ flexDirection: "row" }}>
                         <FontAwesome
@@ -68,7 +70,7 @@ export default class DetailScreen extends React.PureComponent {
                             color="grey"
                             style={styles.icon}
                         />
-                        <Text>{phone}</Text>
+                        <Text>{phones[0]}</Text>
                     </View>
                     <View style={{ flexDirection: "row" }}>
                         <Fontisto
@@ -77,7 +79,7 @@ export default class DetailScreen extends React.PureComponent {
                             color="grey"
                             style={styles.icon}
                         />
-                        <Text>{activeTime}</Text>
+                        {/* <Text>{activeTime}</Text> */}
                     </View>
                     <Text style={styles.title}>Anh</Text>
                 </View>
