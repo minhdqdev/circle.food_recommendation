@@ -1,5 +1,9 @@
 export const DEFAULT_IMAGE = require("../image/default.jpg");
 
+export const HOME_SCREEN = "Home";
+export const ACTIVITY_SCREEN = "Activity";
+export const DETAIL_SCREEN = "Detail";
+
 export const data = [
     {
         name: "Cột điện quán",

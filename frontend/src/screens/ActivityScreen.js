@@ -10,13 +10,18 @@ export default class ActivityScreen extends React.PureComponent {
         search: "",
     };
 
+    onPressItem = async () => {
+        //const data = await testAPI();
+        //console.log(data);
+        this.props.navigation.navigate(DETAIL_SCREEN);
+    };
+
     renderItem = ({ item }) => {
-        return <ItemHistory item={item} props={this.props} />;
+        return <ItemHistory item={item} onPress={this.onPressItem} />;
     };
 
     updateSearch = (search) => {
         this.setState({ search });
-        this.props.navigation.navigate("Detail");
     };
 
     render() {

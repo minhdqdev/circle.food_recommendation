@@ -1,31 +1,69 @@
 import React from "react";
-import { StyleSheet, Text, View, FlatList, StatusBar } from "react-native";
+import { StyleSheet, View, FlatList, StatusBar } from "react-native";
 import { SearchBar } from "react-native-elements";
 import { ItemStore } from "../components/ItemStore";
-import { data } from "../utils/Constant";
+import { getListRestaurant, getSearchDish } from "../services/api";
+import { DETAIL_SCREEN } from "../utils/Constant";
+import { ItemDish } from "../components/ItemDish";
 
-export default class HomeScreen extends React.PureComponent {
+const _ = require("lodash");
+
+class HomeScreen extends React.Component {
     state = {
-        data: data,
+        type: 0,
+        data: [],
         search: "",
+        page: 1,
     };
 
-    renderItem = ({ item, index }) => {
-        return <ItemStore item={item} />;
+    constructor(props) {
+        super(props);
+        this.onChangeTextDelayed = _.debounce(this.debounceFunc, 500);
+    }
+
+    componentDidMount = async () => {
+        const data = await getListRestaurant();
+        this.setState({ data: data });
     };
 
-    updateSearch = (search) => {
-        this.setState({ search });
+    onPressItem = async (item) => {
+        this.props.navigation.navigate(DETAIL_SCREEN, {
+            data: item,
+        });
+    };
+
+    renderItem = ({ item }) => {
+        return <ItemStore item={item} onPress={() => this.onPressItem(item)} />;
+    };
+
+    renderItemDish = ({ item }) => {
+        return <ItemDish item={item} />;
+    };
+
+    debounceFunc = async () => {
+        const { search, page } = this.state;
+        if (search === "") {
+            const data = await getListRestaurant();
+            this.setState({ data, type: 0 });
+            return;
+        }
+        const data = await getSearchDish(search, page);
+        this.setState({ data, type: 1 });
+    };
+
+    onChangeText = (text) => {
+        this.setState({ search: text });
+        this.onChangeTextDelayed();
     };
 
     render() {
-        const { data, search } = this.state;
+        const { data, search, type, page } = this.state;
         return (
             <View style={styles.container}>
                 <StatusBar />
                 <SearchBar
                     placeholder="Tìm kiếm quán ăn..."
-                    onChangeText={this.updateSearch}
+                    onChangeText={this.onChangeText}
                     value={search}
                     inputStyle={styles.inputSearch}
                     containerStyle={styles.containerSearch}
@@ -37,12 +75,14 @@ export default class HomeScreen extends React.PureComponent {
                     numColumns={2}
                     keyExtractor={(item, index) => index.toString()}
                     data={data}
-                    renderItem={this.renderItem}
+                    renderItem={type ? this.renderItemDish : this.renderItem}
                 />
             </View>
         );
     }
 }
+
+export default HomeScreen;
 
 const styles = StyleSheet.create({
     container: {

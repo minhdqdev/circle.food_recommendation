@@ -31,37 +31,57 @@ const MainStack = createStackNavigator();
 const ActivityStackScreen = () => {
     return (
         <Stack.Navigator initialRouteName="Activity">
-            <Stack.Screen name="Activity" component={ActivityScreen} />
-            <Stack.Screen name="Detail" component={DetailScreen} />
+            <Stack.Screen
+                name="Activity"
+                component={ActivityScreen}
+                options={{ headerShown: false }}
+            />
+        </Stack.Navigator>
+    );
+};
+
+const HomeStackScreen = () => {
+    return (
+        <Stack.Navigator initialRouteName="Home">
+            <Stack.Screen
+                name="Home"
+                component={HomeScreen}
+                options={{ headerShown: false }}
+            />
+            <Stack.Screen
+                name="Detail"
+                component={DetailScreen}
+                options={{ headerShown: false }}
+            />
         </Stack.Navigator>
     );
 };
 
 const MainTabScreen = () => {
     return (
-    <Tab.Navigator
-        screenOptions={({ route }) => ({
-            tabBarIcon: ({ focused }) => (
-                <AntDesign
-                    name={routeIcons[route.name]}
-                    size={24}
-                    color={focused ? "red" : "grey"}
-                />
-            ),
-        })}
-        tabBarOptions={{
-            activeTintColor: "red",
-            inactiveTintColor: "grey",
-        }}
-    >
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Activity" component={ActivityStackScreen} />
-        <Tab.Screen name="Checkin" component={CheckinScreen} />
-        <Tab.Screen name="Saved" component={SavedScreen} />
-        <Tab.Screen name="Profile" component={ProfileScreen} />
-    </Tab.Navigator>
+        <Tab.Navigator
+            screenOptions={({ route }) => ({
+                tabBarIcon: ({ focused }) => (
+                    <AntDesign
+                        name={routeIcons[route.name]}
+                        size={24}
+                        color={focused ? "red" : "grey"}
+                    />
+                ),
+            })}
+            tabBarOptions={{
+                activeTintColor: "red",
+                inactiveTintColor: "grey",
+            }}
+        >
+            <Tab.Screen name="Home" component={HomeStackScreen} />
+            <Tab.Screen name="Activity" component={ActivityStackScreen} />
+            <Tab.Screen name="Checkin" component={CheckinScreen} />
+            <Tab.Screen name="Saved" component={SavedScreen} />
+            <Tab.Screen name="Profile" component={ProfileScreen} />
+        </Tab.Navigator>
     );
-}
+};
 
 const routeIcons = {
     Home: "home",
@@ -71,19 +91,20 @@ const routeIcons = {
     Profile: "user",
 };
 
-
 export default function App() {
     return (
         <NavigationContainer>
-            <MainStack.Navigator
-                
-            >
-                <MainStack.Screen name="Login" component={LoginScreen} 
+            <MainStack.Navigator>
+                <MainStack.Screen
+                    name="Login"
+                    component={LoginScreen}
                     options={{
                         headerShown: false,
                     }}
                 />
-                <MainStack.Screen name="TermsAndConditions" component={TermsAndConditionsScreen}
+                <MainStack.Screen
+                    name="TermsAndConditions"
+                    component={TermsAndConditionsScreen}
                     options={{
                         headerShown: true,
                         title: "Điều khoản và sử dụng",
@@ -99,7 +120,6 @@ export default function App() {
                     options={{
                         headerShown: false,
                     }}
-
                 />
             </MainStack.Navigator>
         </NavigationContainer>

@@ -6,10 +6,10 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 
 const { width } = Dimensions.get("screen");
 
-export class ItemStore extends React.PureComponent {
+export class ItemDish extends React.PureComponent {
     render() {
         const { onPress } = this.props;
-        const { photos, name, address, rating } = this.props.item;
+        const { photos, name, description, price } = this.props.item;
         return (
             <TouchableOpacity style={styles.container} onPress={onPress}>
                 <Image
@@ -22,18 +22,9 @@ export class ItemStore extends React.PureComponent {
                     }
                 />
                 <Text style={styles.nameStore}>{name}</Text>
-                <Text style={styles.address}>{address}</Text>
+                <Text style={styles.address}>{description}</Text>
                 <View style={styles.wrapperRating}>
-                    <AirbnbRating
-                        showRating={false}
-                        onFinishRating={this.ratingCompleted}
-                        style={styles.rating}
-                        isDisabled={true}
-                        defaultRating={rating.avg}
-                        fractions={10}
-                        starStyle={styles.starRating}
-                    />
-                    <Text>({rating.avg})</Text>
+                    <Text>{price.text}</Text>
                 </View>
             </TouchableOpacity>
         );
@@ -43,10 +34,10 @@ export class ItemStore extends React.PureComponent {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        width: width * 0.5,
+        width: width * 0.4,
         justifyContent: "center",
         alignItems: "center",
-        padding: 12,
+        margin: width * 0.05,
     },
     image: {
         width: width * 0.4,

@@ -14,13 +14,10 @@ const { height, width } = Dimensions.get("screen");
 
 export class ItemHistory extends React.PureComponent {
     render() {
-        const { navigation } = this.props;
+        const { onPress } = this.props;
         const { imgStore, name, review, rating, time } = this.props.item;
         return (
-            <TouchableOpacity
-                style={styles.container}
-                onPress={() => navigation.navigate("DetailScreen")}
-            >
+            <TouchableOpacity style={styles.container} onPress={onPress}>
                 <Image
                     style={styles.image}
                     resizeMode="stretch"
