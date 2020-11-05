@@ -12,6 +12,7 @@ import ProfileScreen from "./screens/profile-screen";
 import SavedScreen from './screens/saved-screen';
 import LoginScreen from './screens/login-screen';
 import TermsAndConditionsScreen from './screens/terms-and-conditions-screen';
+import ConfirmOTPScreen from './screens/confim-otp-screen';
 
 class CheckinScreen extends React.Component {
     render() {
@@ -86,6 +87,12 @@ export default function App() {
                     options={{
                         headerShown: true,
                         title: "Điều khoản và sử dụng",
+                    }}
+                />
+                <MainStack.Screen name="ConfirmOTP" component={ConfirmOTPScreen}
+                    options={{
+                        headerShown: true,
+                        title: "Xác nhận OTP",
                     }}
                 />
                 <MainStack.Screen name="Main" component={MainTabScreen}

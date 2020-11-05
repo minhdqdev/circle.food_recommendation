@@ -1,13 +1,48 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { StyleSheet, Text, SafeAreaView, ScrollView, TextInput, View, Image, TouchableOpacity } from 'react-native';
 import { AntDesign } from '@expo/vector-icons'; 
 import { EvilIcons } from '@expo/vector-icons'; 
 import { FontAwesome } from '@expo/vector-icons'; 
+import { FirebaseRecaptchaVerifierModal } from 'expo-firebase-recaptcha';
+
+import firebase from '../components/firebase';
+
 
 
 export default class LoginScreen extends React.Component {
     constructor(props){
         super(props);
+
+        this.state = {
+            phoneNumber: '',
+            recaptchaVerifier: React.createRef(null),
+            hasError: false,
+            errorMessage: "",
+        };
+    }
+
+    handlePhoneLogin = () => {
+        // send verification
+        const phoneProvider = new firebase.auth.PhoneAuthProvider();
+    
+        phoneProvider.verifyPhoneNumber(this.state.phoneNumber, this.state.recaptchaVerifier.current).then(
+            (verificationId) => {
+                // navigation to confirmOTP screen
+                this.props.navigation.navigate('ConfirmOTP', {verificationId: verificationId});
+            }
+        );
+    
+        
+    }
+
+    checkValidPhoneNumber = (value) => {
+        if(!value.startsWith("+84")){
+            if(value.startsWith("0")){
+                this.setState({phoneNumber: "+84" + value.slice(1), hasError: false});
+            }
+            else this.setState({hasError: true, errorMessage: "Số điện thoại phải chứa mã vùng Việt Nam +84."});
+        }
+        else this.setState({hasError: false, phoneNumber: value})
     }
 
 
@@ -22,13 +57,14 @@ export default class LoginScreen extends React.Component {
                 
                 <View style={{marginTop: 20, marginBottom: 50}}>
                     <View style={styles.inputContainer, {backgroundColor: 'white'}}>
-                        <TextInput style={{width: '100%', }}>asdf</TextInput>
+        <TextInput style={{width: '100%', }} keyboardType="phone-pad" autoCompleteType="tel" onChangeText={value => this.checkValidPhoneNumber(value)} placeholder="Số điện thoại"></TextInput>
                     </View>
                     <View style={{width: '100%', height: 1, backgroundColor: 'gray'}}></View>
+            <Text style={this.state.hasError ? {color: 'red'} : {color: 'white'}}>{this.state.errorMessage}</Text>
                 </View>
 
                 <View style={{paddingLeft: 30, paddingRight: 30}}>
-                    <TouchableOpacity style={[styles.button, styles.signInButton]} onPress={() => this.props.navigation.navigate('Main')}>
+                    <TouchableOpacity style={[styles.button, styles.signInButton]} onPress={this.handlePhoneLogin}>
                         <Text style={{color: 'white'}}>Tiếp tục</Text>
                     </TouchableOpacity> 
 
@@ -46,7 +82,10 @@ export default class LoginScreen extends React.Component {
                     </TouchableOpacity>
                 </View>
                 
-
+                <FirebaseRecaptchaVerifierModal
+                    ref={this.state.recaptchaVerifier}
+                    firebaseConfig={firebase.app().options}
+                />
             </View>
         </SafeAreaView>
         );
