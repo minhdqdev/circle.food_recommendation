@@ -1,21 +1,40 @@
 import React from "react";
-import {
-    StyleSheet,
-    Text,
-    View,
-    Image,
-    Dimensions,
-    TouchableOpacity,
-} from "react-native";
+import { StyleSheet, Text, View, Image, Dimensions } from "react-native";
 import { DEFAULT_IMAGE } from "../utils/Constant";
-import { Rating, AirbnbRating } from "react-native-ratings";
+import { AirbnbRating } from "react-native-ratings";
 import { FontAwesome, Fontisto } from "@expo/vector-icons";
-import { store } from "../utils/Constant";
 import { ScrollView } from "react-native-gesture-handler";
+import { getDishOfRestaurant } from "../services/api";
+import { ItemDish } from "../components/ItemDish";
 
-const { height, width } = Dimensions.get("screen");
+const { height } = Dimensions.get("screen");
 
 export default class DetailScreen extends React.PureComponent {
+    state = {
+        dishes: [],
+    };
+    componentDidMount = async () => {
+        const restaurantId = this.props.route.params.data.id;
+        const data = await getDishOfRestaurant(restaurantId);
+        this.setState({ dishes: data });
+    };
+
+    renderItem = (item, index) => {
+        return <ItemDish item={item} key={index} onPress={() => {}} />;
+    };
+
+    _renderDishes = () => {
+        const { dishes } = this.state;
+        return (
+            <View>
+                <Text style={styles.title}>Danh sách món ăn</Text>
+                <View style={styles.wrapperList}>
+                    {dishes.map((item, index) => this.renderItem(item, index))}
+                </View>
+            </View>
+        );
+    };
+
     render() {
         const {
             photos,
@@ -24,7 +43,6 @@ export default class DetailScreen extends React.PureComponent {
             address,
             phones,
         } = this.props.route.params.data;
-        console.log(this.props.route.params.data);
         return (
             <ScrollView style={{ flex: 1 }}>
                 <View style={styles.container}>
@@ -32,25 +50,33 @@ export default class DetailScreen extends React.PureComponent {
                         style={styles.image}
                         resizeMode="stretch"
                         source={
-                            phones
+                            photos
                                 ? { uri: photos[photos.length - 1].value }
                                 : DEFAULT_IMAGE
                         }
                     />
                     <Text style={styles.name}>{name}</Text>
                     <View style={styles.wrapperRating}>
-                        <AirbnbRating
-                            showRating={false}
-                            onFinishRating={this.ratingCompleted}
-                            style={styles.rating}
-                            isDisabled={true}
-                            defaultRating={rating.avg}
-                            fractions={10}
-                            starStyle={styles.starRating}
-                            starContainerStyle={{ margin: 0 }}
-                            style={{ margin: 0 }}
-                        />
-                        <Text>({rating.avg})</Text>
+                        <View
+                            style={{
+                                flexDirection: "row",
+                                alignItems: "center",
+                            }}
+                        >
+                            <AirbnbRating
+                                showRating={false}
+                                onFinishRating={this.ratingCompleted}
+                                style={styles.rating}
+                                isDisabled={true}
+                                defaultRating={rating.avg}
+                                fractions={10}
+                                starStyle={styles.starRating}
+                                starContainerStyle={{ margin: 0 }}
+                                style={{ margin: 0 }}
+                            />
+                            <Text>({rating.avg})</Text>
+                        </View>
+                        <Text>({rating.display_total_review})</Text>
                     </View>
                     {/* <Text>{descrip}</Text> */}
                     <Text style={styles.title}>Thông tin</Text>
@@ -81,7 +107,7 @@ export default class DetailScreen extends React.PureComponent {
                         />
                         {/* <Text>{activeTime}</Text> */}
                     </View>
-                    <Text style={styles.title}>Anh</Text>
+                    {this._renderDishes()}
                 </View>
             </ScrollView>
         );
@@ -135,5 +161,12 @@ const styles = StyleSheet.create({
     rating: {
         width: 50,
         margin: 0,
+    },
+    wrapperList: {
+        flex: 1,
+        flexDirection: "row",
+        flexWrap: "wrap",
+        justifyContent: "space-between",
+        marginHorizontal: -15,
     },
 });
