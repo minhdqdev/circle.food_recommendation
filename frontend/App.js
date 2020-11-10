@@ -13,6 +13,9 @@ import SavedScreen from './screens/saved-screen';
 import LoginScreen from './screens/login-screen';
 import TermsAndConditionsScreen from './screens/terms-and-conditions-screen';
 import ConfirmOTPScreen from './screens/confim-otp-screen';
+import LoadingScreen from './screens/loading-screen';
+
+import firebase from './components/firebase';
 
 class CheckinScreen extends React.Component {
     render() {
@@ -57,30 +60,49 @@ const HomeStackScreen = () => {
     );
 };
 
-const MainTabScreen = () => {
-    return (
-        <Tab.Navigator
-            screenOptions={({ route }) => ({
-                tabBarIcon: ({ focused }) => (
-                    <AntDesign
-                        name={routeIcons[route.name]}
-                        size={24}
-                        color={focused ? "red" : "grey"}
-                    />
-                ),
-            })}
-            tabBarOptions={{
-                activeTintColor: "red",
-                inactiveTintColor: "grey",
-            }}
-        >
-            <Tab.Screen name="Home" component={HomeStackScreen} />
-            <Tab.Screen name="Activity" component={ActivityStackScreen} />
-            <Tab.Screen name="Checkin" component={CheckinScreen} />
-            <Tab.Screen name="Saved" component={SavedScreen} />
-            <Tab.Screen name="Profile" component={ProfileScreen} />
-        </Tab.Navigator>
-    );
+class MainTabScreen extends React.Component{
+    constructor(props){
+        super(props);
+
+        this.state = {
+            user: null,
+        }
+    }
+
+    componentDidMount(){
+        // const { currentUser } = firebase.auth();
+
+        // // console.log(currentUser);
+
+        // this.setState({user: currentUser});
+    }
+
+    render(){
+        return (
+            <Tab.Navigator
+                screenOptions={({ route }) => ({
+                    tabBarIcon: ({ focused }) => (
+                        <AntDesign
+                            name={routeIcons[route.name]}
+                            size={24}
+                            color={focused ? "red" : "grey"}
+                        />
+                    ),
+                })}
+                tabBarOptions={{
+                    activeTintColor: "red",
+                    inactiveTintColor: "grey",
+                }}
+            >
+                <Tab.Screen name="Home" component={HomeStackScreen} />
+                <Tab.Screen name="Activity" component={ActivityStackScreen} />
+                <Tab.Screen name="Checkin" component={CheckinScreen} />
+                <Tab.Screen name="Saved" component={SavedScreen} />
+                <Tab.Screen name="Profile" component={ProfileScreen}/>
+            </Tab.Navigator>
+        );
+    }
+    
 };
 
 const routeIcons = {
@@ -95,6 +117,13 @@ export default function App() {
     return (
         <NavigationContainer>
             <MainStack.Navigator>
+                <MainStack.Screen
+                    name="Loading"
+                    component={LoadingScreen}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
                 <MainStack.Screen
                     name="Login"
                     component={LoginScreen}

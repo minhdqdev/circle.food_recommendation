@@ -64,7 +64,7 @@ export default class LoginScreen extends React.Component {
                 </View>
 
                 <View style={{paddingLeft: 30, paddingRight: 30}}>
-                    <TouchableOpacity style={[styles.button, styles.signInButton]} onPress={this.handlePhoneLogin}>
+                    <TouchableOpacity style={[styles.button, styles.signInButton]} onPress={this.handlePhoneLogin} disabled={this.state.hasError}>
                         <Text style={{color: 'white'}}>Tiếp tục</Text>
                     </TouchableOpacity> 
 

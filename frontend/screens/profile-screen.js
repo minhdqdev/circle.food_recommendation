@@ -4,8 +4,9 @@ import { StyleSheet, Text, SafeAreaView, TextInput, View, Image, TouchableOpacit
 import { AntDesign } from '@expo/vector-icons'; 
 import { EvilIcons } from '@expo/vector-icons'; 
 import { FontAwesome } from '@expo/vector-icons'; 
+import firebase from '../components/firebase';
 
-const user = {
+const defaultUser = {
     avatar_url: require('../assets/avatar.jpg'),
     username: "minhdq99hp",
     first_name: "Minh",
@@ -17,6 +18,34 @@ const user = {
 export default class ProfileScreen extends React.Component {
     constructor(props){
         super(props);
+
+        this.state = {
+            user: null,
+            phoneNumber: null,
+            photoURL: defaultUser.avatar_url,
+            displayName: null,
+            errorMessage: '',
+        }
+    }
+
+    componentDidMount(){
+        const {currentUser} = firebase.auth();
+        // console.log(currentUser.phoneNumber);
+        this.setState({user: currentUser});
+
+        const {phoneNumber, photoURL, displayName} = currentUser;
+        this.setState({
+            phoneNumber: phoneNumber, 
+            photoURL: photoURL ? photoURL : this.state.photoURL,
+            displayName: displayName ? displayName : '',
+        });
+    }
+
+    handleSignOut = () => {
+        firebase.auth().signOut().then(()=>{
+            this.props.naivgation.navigate('Loading');
+        })
+        .catch(error => this.setState({errorMessage: error.message }))
     }
 
     render(){
@@ -25,7 +54,7 @@ export default class ProfileScreen extends React.Component {
             <Text style={styles.title}>Tài khoản</Text>
 
             <View style={styles.userAvatarContainer}>
-                <Image style={styles.userAvatar} source={user.avatar_url}/>
+                <Image style={styles.userAvatar} source={this.state.photoURL}/>
                 <TouchableOpacity style={styles.changeAvatarButton}>
                     <AntDesign name="camerao" size={20} color="black" />
                 </TouchableOpacity>
@@ -39,33 +68,32 @@ export default class ProfileScreen extends React.Component {
                             <EvilIcons style={styles.inputIcon} name="user" size={24} color="black" />
                         </View>
                         
-                        <TextInput>{user.last_name} {user.first_name}</TextInput>
+                        <TextInput>{this.state.displayName}</TextInput>
                     </View>
                 </View>
 
                 <View style={styles.fieldContainer}>
-                    <Text style={styles.label}>Tên tài khoản</Text>
+                    <Text style={styles.label}>Số điện thoại</Text>
                     <View style={styles.inputContainer}>
                         <View style={styles.iconContainer}>
                             <EvilIcons style={styles.inputIcon} name="user" size={24} color="black" />
                         </View>
                         
-                        <TextInput>{user.username}</TextInput>
+                        <TextInput>{this.state.phoneNumber}</TextInput>
                     </View>
                 </View>
 
-                <View style={styles.fieldContainer}>
+                {/* <View style={styles.fieldContainer}>
                     <Text style={styles.label}>Giới tính</Text>
                     <View style={styles.inputContainer}>
                         <View style={styles.iconContainer}>
                             <FontAwesome style={styles.inputIcon} name="genderless" size={24} color="black" />
                         </View>
-                        <TextInput>{user.gender}</TextInput>
+                        <TextInput>{defaultUser.gender}</TextInput>
                     </View>
-                </View>
+                </View> */}
             </View>
-            
-            <TouchableOpacity style={styles.signOutButton} onPress={()=> this.props.navigation.navigate('Login')}>
+            <TouchableOpacity style={styles.signOutButton} onPress={this.handleSignOut}>
                 <Text style={{color: 'white'}}>Đăng xuất</Text>
             </TouchableOpacity>
             
