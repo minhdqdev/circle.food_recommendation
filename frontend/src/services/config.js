@@ -1,13 +1,15 @@
 const axios = require("axios");
 
-// const BASE_URL = "https://some-domain.com/api/";
-// const BASE_URL = "https://reqres.in";
-const BASE_URL = "http://192.168.1.31:3001";
+const BASE_URL_BE = "https://foozy.herokuapp.com";
+const BASE_URL_ES = "http://3.129.57.131:6969";
+// const BASE_URL = "http://192.168.1.31:3001";
 
-const axiosIns = axios.create({
-    baseURL: BASE_URL,
-    timeout: 1000,
-    //headers: { "X-Custom-Header": "foobar" },
+export const axiosES = axios.create({
+    baseURL: BASE_URL_ES,
+    timeout: 10000,
 });
 
-export default axiosIns;
+export const axiosBE = axios.create({
+    baseURL: BASE_URL_BE,
+    timeout: 10000,
+});

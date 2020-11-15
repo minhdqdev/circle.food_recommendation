@@ -9,13 +9,13 @@ import { createStackNavigator } from "@react-navigation/stack";
 import DetailScreen from "./src/screens/DetailScreen";
 
 import ProfileScreen from "./screens/profile-screen";
-import SavedScreen from './screens/saved-screen';
-import LoginScreen from './screens/login-screen';
-import TermsAndConditionsScreen from './screens/terms-and-conditions-screen';
-import ConfirmOTPScreen from './screens/confim-otp-screen';
-import LoadingScreen from './screens/loading-screen';
+import SavedScreen from "./screens/saved-screen";
+import LoginScreen from "./screens/login-screen";
+import TermsAndConditionsScreen from "./screens/terms-and-conditions-screen";
+import ConfirmOTPScreen from "./screens/confim-otp-screen";
+import LoadingScreen from "./screens/loading-screen";
 
-import firebase from './components/firebase';
+import firebase from "./components/firebase";
 
 class CheckinScreen extends React.Component {
     render() {
@@ -60,24 +60,22 @@ const HomeStackScreen = () => {
     );
 };
 
-class MainTabScreen extends React.Component{
-    constructor(props){
+class MainTabScreen extends React.Component {
+    constructor(props) {
         super(props);
 
         this.state = {
             user: null,
-        }
+        };
     }
 
-    componentDidMount(){
+    componentDidMount() {
         // const { currentUser } = firebase.auth();
-
         // // console.log(currentUser);
-
         // this.setState({user: currentUser});
     }
 
-    render(){
+    render() {
         return (
             <Tab.Navigator
                 screenOptions={({ route }) => ({
@@ -98,12 +96,11 @@ class MainTabScreen extends React.Component{
                 <Tab.Screen name="Activity" component={ActivityStackScreen} />
                 <Tab.Screen name="Checkin" component={CheckinScreen} />
                 <Tab.Screen name="Saved" component={SavedScreen} />
-                <Tab.Screen name="Profile" component={ProfileScreen}/>
+                <Tab.Screen name="Profile" component={ProfileScreen} />
             </Tab.Navigator>
         );
     }
-    
-};
+}
 
 const routeIcons = {
     Home: "home",
@@ -139,13 +136,17 @@ export default function App() {
                         title: "Điều khoản và sử dụng",
                     }}
                 />
-                <MainStack.Screen name="ConfirmOTP" component={ConfirmOTPScreen}
+                <MainStack.Screen
+                    name="ConfirmOTP"
+                    component={ConfirmOTPScreen}
                     options={{
                         headerShown: true,
                         title: "Xác nhận OTP",
                     }}
                 />
-                <MainStack.Screen name="Main" component={MainTabScreen}
+                <MainStack.Screen
+                    name="Main"
+                    component={MainTabScreen}
                     options={{
                         headerShown: false,
                     }}

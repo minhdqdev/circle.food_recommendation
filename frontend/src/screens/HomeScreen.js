@@ -1,10 +1,12 @@
 import React from "react";
-import { StyleSheet, View, FlatList, StatusBar } from "react-native";
+import { StyleSheet, View, FlatList, StatusBar, Alert } from "react-native";
 import { SearchBar } from "react-native-elements";
 import { ItemStore } from "../components/ItemStore";
 import { getListRestaurant, getSearchDish } from "../services/api";
 import { DETAIL_SCREEN } from "../utils/Constant";
 import { ItemDish } from "../components/ItemDish";
+import * as Location from "expo-location";
+import { location } from "../utils/Constant";
 
 const _ = require("lodash");
 
@@ -14,16 +16,40 @@ class HomeScreen extends React.Component {
         data: [],
         search: "",
         page: 1,
+        location: null,
     };
 
     constructor(props) {
         super(props);
-        this.onChangeTextDelayed = _.debounce(this.debounceFunc, 500);
+        this.onChangeTextDelayed = _.debounce(this.debounceFunc, 300);
     }
 
     componentDidMount = async () => {
-        const data = await getListRestaurant();
-        this.setState({ data: data });
+        const { search } = this.state;
+        //get location
+        let { status } = await Location.requestPermissionsAsync();
+        if (status !== "granted") {
+            Alert("Permission to access location was denied");
+        }
+        let _location;
+        try {
+            _location = await Location.getCurrentPositionAsync({});
+        } catch (err) {
+            _location = {
+                coords: {
+                    latitude: 21.0333,
+                    longitude: 105.85,
+                },
+            };
+        } finally {
+            location.latitude = _location.coords.latitude;
+            location.longitude = _location.coords.longitude;
+            this.setState({ location: _location }, () =>
+                console.log("Current location: ", location)
+            );
+            const data = await getListRestaurant(search);
+            this.setState({ data });
+        }
     };
 
     onPressItem = async (item) => {
@@ -43,12 +69,15 @@ class HomeScreen extends React.Component {
     debounceFunc = async () => {
         const { search, page } = this.state;
         if (search === "") {
-            const data = await getListRestaurant();
+            const data = await getListRestaurant(search);
             this.setState({ data, type: 0 });
             return;
         }
-        const data = await getSearchDish(search, page);
-        this.setState({ data, type: 1 });
+        const data = await getListRestaurant(search, 20);
+        this.setState({ data, type: 0 });
+        return;
+        // const data = await getSearchDish(search, page);
+        // this.setState({ data, type: 1 });
     };
 
     onChangeText = (text) => {
