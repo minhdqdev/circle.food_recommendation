@@ -96,7 +96,7 @@ export default class DetailScreen extends React.PureComponent {
                             color="grey"
                             style={styles.icon}
                         />
-                        <Text>{phones[0]}</Text>
+                        <Text>{phones ? phones[0] : "___"}</Text>
                     </View>
                     <View style={{ flexDirection: "row" }}>
                         <Fontisto

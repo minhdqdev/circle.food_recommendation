@@ -1,3 +1,8 @@
+export const location = {
+    latitude: 0,
+    longitude: 0,
+};
+
 export const DEFAULT_IMAGE = require("../image/default.jpg");
 
 export const HOME_SCREEN = "Home";
