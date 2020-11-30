@@ -2,7 +2,6 @@ const axios = require("axios");
 
 const BASE_URL_BE = "https://foozy.herokuapp.com";
 const BASE_URL_ES = "http://3.129.57.131:6969";
-// const BASE_URL = "http://192.168.1.31:3001";
 
 export const axiosES = axios.create({
     baseURL: BASE_URL_ES,

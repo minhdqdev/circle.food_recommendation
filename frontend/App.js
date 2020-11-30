@@ -16,14 +16,11 @@ import ConfirmOTPScreen from "./screens/confim-otp-screen";
 import LoadingScreen from "./screens/loading-screen";
 
 import firebase from "./components/firebase";
+import { ComingSoon } from "./src/components/ComingSoon";
 
 class CheckinScreen extends React.Component {
     render() {
-        return (
-            <View style={styles.container}>
-                <Text>Checkin</Text>
-            </View>
-        );
+        return <ComingSoon />;
     }
 }
 
@@ -36,7 +33,7 @@ const ActivityStackScreen = () => {
         <Stack.Navigator initialRouteName="Activity">
             <Stack.Screen
                 name="Activity"
-                component={ActivityScreen}
+                component={ComingSoon}
                 options={{ headerShown: false }}
             />
         </Stack.Navigator>

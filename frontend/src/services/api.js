@@ -34,6 +34,26 @@ export const getListRestaurant = async (
     }
 };
 
+export const getNearRestaurant = async (
+    size = 20,
+    latitude = location.latitude,
+    longitude = location.longitude
+) => {
+    try {
+        const URL = `/api/recommender?latitude=${latitude}&size=${size}&distance=2km`;
+        const response = await axiosES.post(URL);
+        if (response.status === 200) {
+            return response.data.hits.hits.map((item) => {
+                return { id: item._id, ...item._source.delivery_detail };
+            });
+        } else {
+            return response.err;
+        }
+    } catch (error) {
+        console.error(error);
+    }
+};
+
 export const getDetailRestaurant = async (restaurantId) => {
     try {
         const URL = `/restaurant/${restaurant}`;

@@ -4,23 +4,61 @@ import { DEFAULT_IMAGE } from "../utils/Constant";
 import { AirbnbRating } from "react-native-ratings";
 import { FontAwesome, Fontisto } from "@expo/vector-icons";
 import { ScrollView } from "react-native-gesture-handler";
-import { getDishOfRestaurant } from "../services/api";
+import { getDishOfRestaurant, getListRestaurant } from "../services/api";
 import { ItemDish } from "../components/ItemDish";
+import { ItemStore } from "../components/ItemStore";
 
 const { height } = Dimensions.get("screen");
 
 export default class DetailScreen extends React.PureComponent {
     state = {
+        info: {
+            rating: {
+                avg: 0,
+                display_total_review: "",
+                total_review: 0,
+            },
+        },
         dishes: [],
+        rcmRes: [],
     };
+
     componentDidMount = async () => {
+        this.setState({
+            info: this.props.route.params.data,
+        });
         const restaurantId = this.props.route.params.data.id;
         const data = await getDishOfRestaurant(restaurantId);
-        this.setState({ dishes: data });
+        const rcmRes = await getListRestaurant("Sua chua");
+        this.setState({
+            dishes: data.slice(0, 6),
+            rcmRes,
+        });
+    };
+
+    onPressItem = async (item) => {
+        this.setState({
+            info: item,
+        });
+        this.scrollView.scrollTo({ x: 0, y: 0, animated: true });
+        const restaurantId = item.id;
+        const data = await getDishOfRestaurant(restaurantId);
+        const rcmRes = await getListRestaurant("Sua chua", 20);
+        this.setState({ dishes: data.slice(0, 6), rcmRes });
     };
 
     renderItem = (item, index) => {
         return <ItemDish item={item} key={index} onPress={() => {}} />;
+    };
+
+    renderRes = (item, index) => {
+        return (
+            <ItemStore
+                key={index}
+                item={item}
+                onPress={() => this.onPressItem(item)}
+            />
+        );
     };
 
     _renderDishes = () => {
@@ -35,6 +73,18 @@ export default class DetailScreen extends React.PureComponent {
         );
     };
 
+    _renderNearRestaurant = () => {
+        const { rcmRes } = this.state;
+        return (
+            <View>
+                <Text style={styles.title}>Quán ăn đề xuất</Text>
+                <View style={styles.wrapperList}>
+                    {rcmRes.map((item, index) => this.renderRes(item, index))}
+                </View>
+            </View>
+        );
+    };
+
     render() {
         const {
             photos,
@@ -42,9 +92,13 @@ export default class DetailScreen extends React.PureComponent {
             rating,
             address,
             phones,
-        } = this.props.route.params.data;
+            price_range,
+        } = this.state.info;
         return (
-            <ScrollView style={{ flex: 1 }}>
+            <ScrollView
+                style={{ flex: 1 }}
+                ref={(ref) => (this.scrollView = ref)}
+            >
                 <View style={styles.container}>
                     <Image
                         style={styles.image}
@@ -80,7 +134,7 @@ export default class DetailScreen extends React.PureComponent {
                     </View>
                     {/* <Text>{descrip}</Text> */}
                     <Text style={styles.title}>Thông tin</Text>
-                    <View style={{ flexDirection: "row" }}>
+                    <View style={{ flexDirection: "row", height: 25 }}>
                         <FontAwesome
                             name="map-marker"
                             size={18}
@@ -89,25 +143,34 @@ export default class DetailScreen extends React.PureComponent {
                         />
                         <Text>{address}</Text>
                     </View>
-                    <View style={{ flexDirection: "row" }}>
+                    <View
+                        style={{ flexDirection: "row", alignItems: "center" }}
+                    >
                         <FontAwesome
                             name="phone"
                             size={18}
                             color="grey"
                             style={styles.icon}
                         />
-                        <Text>{phones ? phones[0] : "___"}</Text>
-                    </View>
-                    <View style={{ flexDirection: "row" }}>
+                        <Text>{phones ? phones[0] : "0369789432"}</Text>
+
                         <Fontisto
                             name="shopping-store"
                             size={14}
                             color="grey"
-                            style={styles.icon}
+                            style={[
+                                styles.icon,
+                                { marginLeft: 50, paddingTop: 3 },
+                            ]}
                         />
-                        {/* <Text>{activeTime}</Text> */}
+                        <Text>
+                            {price_range
+                                ? `${price_range.min_price} ₫ - ${price_range.max_price} ₫`
+                                : "Chưa có thông tin"}
+                        </Text>
                     </View>
                     {this._renderDishes()}
+                    {this._renderNearRestaurant()}
                 </View>
             </ScrollView>
         );
@@ -118,6 +181,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 12,
+        backgroundColor: "#fcfcfc",
     },
     image: {
         width: "100%",
