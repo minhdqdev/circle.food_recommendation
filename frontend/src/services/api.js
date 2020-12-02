@@ -35,12 +35,13 @@ export const getListRestaurant = async (
 };
 
 export const getNearRestaurant = async (
+    id,
     size = 20,
     latitude = location.latitude,
     longitude = location.longitude
 ) => {
     try {
-        const URL = `/api/recommender?latitude=${latitude}&size=${size}&distance=2km`;
+        const URL = `/api/recommender/${id}?latitude=${latitude}&longitude=${longitude}&size=${size}&distance=2km`;
         const response = await axiosES.post(URL);
         if (response.status === 200) {
             return response.data.hits.hits.map((item) => {

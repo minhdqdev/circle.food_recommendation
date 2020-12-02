@@ -55,6 +55,7 @@ class HomeScreen extends React.Component {
     onPressItem = async (item) => {
         this.props.navigation.navigate(DETAIL_SCREEN, {
             data: item,
+            key: this.state.search,
         });
     };
 

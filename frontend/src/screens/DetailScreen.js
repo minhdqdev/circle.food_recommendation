@@ -4,7 +4,8 @@ import { DEFAULT_IMAGE } from "../utils/Constant";
 import { AirbnbRating } from "react-native-ratings";
 import { FontAwesome, Fontisto } from "@expo/vector-icons";
 import { ScrollView } from "react-native-gesture-handler";
-import { getDishOfRestaurant, getListRestaurant } from "../services/api";
+import { getDishOfRestaurant, getNearRestaurant } from "../services/api";
+import { optimizedDishes } from "../services/optimizeDish";
 import { ItemDish } from "../components/ItemDish";
 import { ItemStore } from "../components/ItemStore";
 
@@ -28,10 +29,12 @@ export default class DetailScreen extends React.PureComponent {
             info: this.props.route.params.data,
         });
         const restaurantId = this.props.route.params.data.id;
+        const key = this.props.route.params.key;
         const data = await getDishOfRestaurant(restaurantId);
-        const rcmRes = await getListRestaurant("Sua chua");
+        const rcmRes = await getNearRestaurant(restaurantId);
+        const resData = optimizedDishes(data, key);
         this.setState({
-            dishes: data.slice(0, 6),
+            dishes: resData,
             rcmRes,
         });
     };
@@ -43,8 +46,9 @@ export default class DetailScreen extends React.PureComponent {
         this.scrollView.scrollTo({ x: 0, y: 0, animated: true });
         const restaurantId = item.id;
         const data = await getDishOfRestaurant(restaurantId);
-        const rcmRes = await getListRestaurant("Sua chua", 20);
-        this.setState({ dishes: data.slice(0, 6), rcmRes });
+        const rcmRes = await getNearRestaurant(restaurantId);
+        const resData = optimizedDishes(data, item.name);
+        this.setState({ dishes: resData, rcmRes });
     };
 
     renderItem = (item, index) => {
@@ -198,7 +202,7 @@ const styles = StyleSheet.create({
         fontSize: 22,
     },
     title: {
-        fontSize: 16,
+        fontSize: 18,
         fontWeight: "bold",
         marginTop: 12,
     },
